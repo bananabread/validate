@@ -93,8 +93,3 @@
     };
 
 }(jQuery));
-
-$('.myButton').click(function () {
-    var outcome = $('.myForm').validate();
-    alert(outcome);
-});
