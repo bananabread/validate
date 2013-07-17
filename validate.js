@@ -35,7 +35,7 @@
                     max = element.data('max');
 
                 if (length < min || length > max) {
-                    message = '<span class="output">Content must be between ' + min + ' and ' + max + ' characters</span>';
+                    message = '<span class="validator-output">Content must be between ' + min + ' and ' + max + ' characters</span>';
                     pass = false;
                 }
 
@@ -44,7 +44,7 @@
             if (element.hasClass('numeric')) {
                 var pattern = /^\d*[0-9](|.\d*[0-9]|,\d*[0-9])?$/;
                 if (!value.match(pattern)) {
-                    message = '<span class="output">Value must be numeric</span>';
+                    message = '<span class="validator-output">Value must be numeric</span>';
                     pass = false;
                 }
             }
@@ -52,7 +52,7 @@
             if (element.hasClass('alphanum')) {
                 var pattern = /^\s*[a-zA-Z0-9,.\s]+\s*$/;
                 if (!value.match(pattern)) {
-                    message = '<span class="output">No special characters allowed</span>';
+                    message = '<span class="validator-output">No special characters allowed</span>';
                     pass = false;
                 }
             }
@@ -60,7 +60,7 @@
             if (element.hasClass('email')) {
                 var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
                 if (!value.match(pattern)) {
-                    message = '<span class="output">Value must be a valid email address</span>';
+                    message = '<span class="validator-output">Value must be a valid email address</span>';
                     pass = false;
                 }
             }
@@ -68,16 +68,16 @@
             if (element.hasClass('required')) {
                 if(element.is(':checkbox')) {
                     if(element.prop('checked') === false) {
-                        message = '<span class="output">This field is required</span>';
+                        message = '<span class="validator-output">This field is required</span>';
                         pass = false;
                     }
                 } else if (value === '') {
-                    message = '<span class="output">This field is required</span>';
+                    message = '<span class="validator-output">This field is required</span>';
                     pass = false;
                 }
             }
 
-            element.next('.output').remove();
+            element.next('.validator-output').remove();
             element.after(message);
 
             result.push(pass);
