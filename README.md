@@ -6,6 +6,8 @@ Validate jQuery Plugin
 Description
 -------------------------------------------------------------------
 
+Still very much a work in progress!
+
 The plugin targets a HTML form and looks for certain classes,
 producing validation output along side the form field.
 
@@ -14,7 +16,7 @@ a learning experience than an attempt to make anything for
 others to use. Comes in at 1.12kb minified so maybe someone
 will find some use for it.
 
-Any feedback or suggestions welcomed (I'm still learning),
+Any feedback or suggestions welcome (I'm still learning),
 so feel free to fork or email me.
 
 ^_^
